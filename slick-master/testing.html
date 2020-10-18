@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <meta charset="UTF-8">
+	
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+	<style>
+		html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+	</style>
+</head>
+<body>
+	<section class="center slider">
+			    <div>
+			      <img src="http://placehold.it/350x300?text=1">
+			    </div>
+			    <div>
+			      <img src="http://placehold.it/350x300?text=2">
+			    </div>
+			    <div>
+			      <img src="http://placehold.it/350x300?text=3">
+			    </div>
+			    <div>
+			      <img src="http://placehold.it/350x300?text=4">
+			    </div>
+			    <div>
+			      <img src="http://placehold.it/350x300?text=5">
+			    </div>
+			    <div>
+			      <img src="http://placehold.it/350x300?text=6">
+			    </div>
+			    <div>
+			      <img src="http://placehold.it/350x300?text=7">
+			    </div>
+			    <div>
+			      <img src="http://placehold.it/350x300?text=8">
+			    </div>
+			    <div>
+			      <img src="http://placehold.it/350x300?text=9">
+			    </div>
+			</section>
+
+<script type="text/javascript" src="../bootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="slick/slick.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.center').slick({
+		  dots: false,
+		  slidesToShow: 5,
+		  slidesToScroll: 1,
+		  touchMove: false
+		});
+	})
+</script>
+</body>
+</html>

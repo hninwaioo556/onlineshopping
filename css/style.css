@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700");
+.ease, .slider .imgContainer .image, .slider .imgContainer .image img, .slider .indicators li, .slider .carousel-item .content > * {
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+/*Navigation*/
+nav.menu{
+	box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+nav.menu .navbar-nav .nav-item .nav-link{
+	font-size: 0.9rem;
+	padding: 0 1.2rem;
+}
+
+nav.menu .navbar-nav .nav-item .nav-link:hover{
+	color:green;
+}
+
+/*divider*/
+hr.divider {
+  max-width: 5.25rem;
+  border-width: 0.2rem;
+  border-color: green;
+}
+hr.item-divider{
+	max-width: 5.25rem;
+	border-width: 0.1rem;
+	border-color: green;
+}
+
+.head{
+	font-family: "Work Sans", sans-serif;
+	font-weight: 600;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+
+/*Product*/
+.inner {
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  color: green; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: green;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.inner:hover .overlay {
+  opacity: 1;
+  transform: translateY(-30%);
+
+}
+ 
+.inner{
+    overflow: hidden;
+}
+ 
+.inner img{
+    transition: all 1.5s ease;
+}
+ 
+.inner:hover img{
+    transform: scale(1.1);
+}
+
+.border-radius{
+	border-radius: 30px;
+}
+
+.item-card-body{
+	padding-bottom: 0;
+}
+
+.item-bg{
+	border-top: 1px solid rgba(0,0,0,.125);
+	border-left: 1px solid rgba(0,0,0,.125);
+}
+
+.item-save:hover .fa-heart{
+	color: green;
+}
+
+.item-add:hover .fa-cart-plus{
+	color:green;
+}
+
+/*Contact in home page*/
+.about{
+  background-image: url(../images/bg.jpg);
+  position: relative;
+  z-index: 1;
+}
+.about::before{
+  background: #000000;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+
+.fa-stack{
+  opacity: 0.7;
+}
+
+/*Add to cart*/
+#count .p1[data-count]:after{
+  position:absolute;
+  right:10%;
+  top:8%;
+  content: attr(data-count);
+  font-size:70%;
+  padding:.2em;
+  border-radius:50%;
+  line-height:1em;
+  color: green;
+  background:rgba(255,0,0,.85);
+  text-align:center;
+  min-width: 1em;
+  font-weight:bold;
+}
+
+@media only screen and (min-width: 768px) {
+
+  #count{
+    font-size: 1.2rem;
+    margin-top: -0.5rem;
+  }
+
+}
