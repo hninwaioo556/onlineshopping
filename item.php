@@ -38,8 +38,11 @@ $sql="SELECT items.*,brands.name as brand_name,subcategories.name as sub_name,ca
 				<div class="card">
 					<div class="inner">
                             <img class="card-img-top" src="backend/<?= $item['photo'] ?>" alt="Card image cap">
-                            <div class="overlay">
-								<button class="btn btn-warning border-radius view_detail" data-id="<?= $item['id'] ?>" data-name="<?= $item['name'] ?>" data-price="<?= $item['price'] ?>" data-discount="<?= $item['discount'] ?>" data-brand="<?= $item['brand_name'] ?>" data-subcategory="<?= $item['sub_name'] ?>" data-description="<?= $item['description'] ?>" data-photo="<?= $item['photo'] ?>">Quick View</button>
+                            <div class="overlay view_detail" data-id="<?= $item['id'] ?>" data-name="<?= $item['name'] ?>" data-price="<?= $item['price'] ?>" data-discount="<?= $item['discount'] ?>" data-brand="<?= $item['brand_name'] ?>"	data-subcategory="<?= $item['sub_name'] ?>" data-description="<?= $item['description'] ?>" data-photo="<?= $item['photo'] ?>">
+                            	<span class="btn fa-stack fa-lg" title="View Detail">
+								<i class="fas fa-circle fa-stack-2x text-success"></i>
+								<i class="fas fa-eye fa-stack-1x fa-inverse"></i>
+								</span>
 							</div>
                     </div>
 					<div class="card-body text-justify item-card-body">
@@ -65,26 +68,19 @@ $sql="SELECT items.*,brands.name as brand_name,subcategories.name as sub_name,ca
 					</div>
 
 					<div class="container-fluid p-0 m-0">
-						<div class="row text-center p-0 m-0">
-							<div class="col-md-6 item-bg mt-1">
-								<a href="" class="text-decoration-none text-dark item-save">
-									<i class="fas fa-heart fa-lg py-3"></i>
+						<a href="javascript:void(0)" class="text-decoration-none text-dark item-add addtocart" data-id="<?= $item['id'] ?>" data-name="<?= $item['name'] ?>" data-price="<?= $item['price'] ?>" data-discount="<?= $item['discount'] ?>">
+									<button class="btn btn-outline-success btn-block">Add to Card</button>
 								</a>
-							</div>
-							<div class="col-md-6 item-bg mt-1">
-								<a href="javascript:void(0)" class="text-decoration-none text-dark item-add addtocart" data-id="<?= $item['id'] ?>" data-name="<?= $item['name'] ?>" data-price="<?= $item['price'] ?>" data-discount="<?= $item['discount'] ?>">
-									<i class="fas fa-cart-plus fa-lg py-3 item-add"></i>
-								</a>
-							</div>
 						</div>
-					</div>
-
 				</div>
-			</div>
-
+					</div>
 			<?php } ?>
 
 		</div>
+		<div class="text-center my-5">
+			<a href="product.html" class="btn btn-outline-success btn-lg">View More</a>
+		</div>
 	</div>
+	
 
 <?php include 'include/footer.php'; ?>

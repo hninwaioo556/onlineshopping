@@ -37,8 +37,6 @@ include 'include/header.php';
 				 echo '<a href="backend/login.php"  class="btn btn-warning float-right">Login to buy</a>';
 				}
 					?>
-
-
 			</div>
 		</div>
 	</div>
